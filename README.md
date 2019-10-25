@@ -1,24 +1,21 @@
-# README
+# Compliance
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Tanda Hackathon - Team Compliance
 
-Things you may want to cover:
+### How To Install
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Make a clone of this repository on your computer
+* Run a bundle install:
+```
+bundle install
+```
+* Update `config/database.yml` with your postgres username and password
+* Set up your database by running:
+```
+rails db:setup
+rails db:migrate
+```
+* Test the server works:
+```
+rails s
+```
