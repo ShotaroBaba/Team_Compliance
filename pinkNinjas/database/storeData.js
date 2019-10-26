@@ -23,6 +23,9 @@ var FormSchema = new Schema({
     },
     "EmploymentLevel": {
         type: String
+    },
+    "employee_id": {
+        type: Number
     }
 });
 

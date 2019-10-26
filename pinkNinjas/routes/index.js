@@ -15,29 +15,30 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/result', async (req, res) => {
-  console.log(req.body);
+  // console.log(req);
   try {
-    // const callResponse = await createShift(req);
-    // const callResponse = await getData("award_tags");
-    // console.log(callResponse);
+
+    const newUser = await create_user(req); 
+    console.log(newUser.data[0].id);
 
     // store data in db
-    // let t = new formModel();
-    // t.name = req.body.name;
-    // t.email = req.body.email;
-    // t.dob = req.body.dateOfBirth;
-    // t.employee_startDate = req.body.employmentStartDate;
-    // t.modern_awards = req.body.modernAward;
-    // t.employmentStatus = req.body.employmentStatus;
-    // t.EmploymentLevel = req.body.levelEmployment;
+    let t = new formModel();
+    t.name = req.body.name;
+    t.email = req.body.email;
+    t.dob = req.body.dateOfBirth;
+    t.employee_startDate = req.body.employmentStartDate;
+    t.modern_awards = req.body.modernAward;
+    t.employmentStatus = req.body.employmentStatus;
+    t.EmploymentLevel = req.body.levelEmployment;
+    t.employee_id = newUser.data[0].id;
 
-    // t.save(function(err){
-    //   if (err) {
-    //     console.log('Error saving to db: ', err);
-    //   } else {
-    //     console.log('Saved to db');
-    //   }
-    // })
+    t.save(function(err){
+      if (err) {
+        console.log('Error saving to db: ', err);
+      } else {
+        console.log('Saved to db');
+      }
+    })
 
 
   } catch (err) {

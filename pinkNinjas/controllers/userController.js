@@ -7,7 +7,7 @@ const callHeader =
   }
 
 async function create_user(req) {
-  // console.log(req.body);
+  console.log(req.body);
   const params={
     name: req.body.name,
     date_of_birth: req.body.dateOfBirth,
