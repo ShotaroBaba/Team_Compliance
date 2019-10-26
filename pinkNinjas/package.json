@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
@@ -13,6 +14,7 @@
     "mongoose": "^5.7.7",
     "morgan": "~1.9.1",
     "nodemon": "^1.19.4",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "tanda": "^1.0.1"
   }
 }

@@ -4,7 +4,7 @@ var router = express.Router();
 
 //- Require controller modules
 var user_controller = require('../controllers/userController');
-=======
+
 // DB models
 var formModel = require('../database/storeData');
 
@@ -48,10 +48,11 @@ router.post('/result', function(req, res) {
       }
     })
 
+
   } catch (err) {
     res.render('error', { message: "Error occured saving to db", error: err })
   }
-  
+
   res.render('result', { title: 'result'});
 });
 
