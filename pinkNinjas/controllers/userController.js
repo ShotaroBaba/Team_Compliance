@@ -37,7 +37,7 @@ async function getData(endpoint) {
 
 async function getshifts(id) {
   try {
-    const response = await axios.get(`https://my.tanda.co/api/v2/shifts?user_ids=${id}`, { headers: callHeader });
+    const response = await axios.get(`https://my.tanda.co/api/v2/shifts?user_ids=${id}&from=2019-10-25&to=2019-10-27&show_costs=true&show_award_interpretation=true`, { headers: callHeader });
     // console.log(response);
     return response;
   } catch(err) {

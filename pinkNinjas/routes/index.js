@@ -41,7 +41,16 @@ router.post('/result', async (req, res) => {
       }
     })
 
+    var costs = [];
+    shifts.data.forEach(function(element) {
+      costs.push(element.cost);
+    });
 
+    var monfri = (costs[0] / 3).toFixed(2);
+    var sat = (costs[1] / 3).toFixed(2);
+    var sun = (costs[2] / 3).toFixed(2);
+
+    console.log(monfri, sat, sun);
 
   } catch (err) {
     console.log(err);
@@ -56,9 +65,9 @@ router.post('/result', async (req, res) => {
                         sun_rate: '2.0',
                         publicholiday_rate: '2.5',
                         hourly_cost: '15',
-                        monfri_cost: '18.75',
-                        sat_cost: '22.5',
-                        sun_cost: '30',
+                        monfri_cost: monfri, 
+                        sat_cost: sat, 
+                        sun_cost: sun, 
                         publicholiday_cost: '37.5'
                       });
 });
