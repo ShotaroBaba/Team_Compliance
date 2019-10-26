@@ -12,13 +12,7 @@ var app = express();
 
 // connecting the database
 const dbConn = "mongodb+srv://teamcompliance:teamcompliance@cluster0-cyhng.mongodb.net/pinkninjas?retryWrites=true&w=majority"
-// Set three properties to avoid deprecation warnings:
-// useNewUrlParser: true
-// useUnifiedTopology: true
-// useFileAndModify: false
 try {
-
-
 	mongoose.connect(
 		dbConn,
 		{

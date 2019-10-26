@@ -3,12 +3,10 @@ var router = express.Router();
 
 var { getData } = require('../controllers/userController');
 
-
 //- Require controller modules
 var user_controller = require('../controllers/userController');
 // DB models
 var formModel = require('../database/storeData');
-
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -52,9 +50,9 @@ router.post('/result', async (req, res) => {
     })
 
   } catch (err) {
-    res.render('error', { message: "Error occured saving to db", error: err })
+    res.render('error', { message: "Error occurred saving to db", error: err })
   }
-  
+
   res.render('result', { title: 'result'});
 });
 
