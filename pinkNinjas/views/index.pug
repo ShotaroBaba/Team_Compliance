@@ -1,33 +1,80 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  p Katrina get off facebook
+  .container
+    .section
+      section.hero
+        h1.title.is-size-1= title
+        .subtitle  
+          p Welcome to #{title}
+          p Katrina get off facebook
 
-    .container
+    .section
       .row
-        form(action='/result', method='post')
-          div.form-group
-            label(for='name') Name:
-            input#name.form-control(type='text', placeholder='first and last' name='name')
-          div.form-group
-            label(for='email') Email:
-            input#email.form-control(type='email', placeholder='name@email.com' name='email')
-          div.form-group
-            label(for='dateOfBirth') Date Of Birth:
-            input#dateOfBirth.form-control(type='text', placeholder='YYYY-MM-DD' name='dateOfBirth')
-          div.form-group
-            label(for='employmentStartDate') Employment Start Date:
-            input#employmentStartDate.form-control(type='text', placeholder='YYYY-MM-DD' name='employmentStartDate')
-          div.form-group
-            label(for='modernAward') Modern Award:
-            input#modernAward.form-control(type='text', placeholder='modern award' name='modernAward')
-          div.form-group
-            label(for='employmentStatus') Employment Status:
-            input#modernAward.form-control(type='text', placeholder='ft, pt, cas' name='employmentStatus')
-          div.form-group
-            label(for='levelEmployment') Level of Employment:
-            input#modernAward.form-control(type='text', placeholder='Level of Employment' name='levelEmployment')
-          button.btn.waves-effect.waves-light.right(type='submit', value='Submit')
-              | Search
+        form(action='/', method='post')
+          div#formContainer.section
+            label(for='name').label Name
+            div.field
+              p.control.has-icons-left
+                input#name.input(type="name" placeholder="John Smith").is-rounded
+                span.icon.is-small.is-left
+                  i.fas.fa-user
+
+            label(for='email').label Email
+            div.field
+              p.control.has-icons-left
+                input#email.input(type="email" placeholder="johnsmith@gmail.com").is-rounded
+                span.icon.is-small.is-left
+                  i.fas.fa-envelope
+
+            label(for='dateOfBirth').label Date Of Birth
+            div.field
+              p.control.has-icons-left
+                input#dateOfBirth.input(type="date").is-rounded
+                span.icon.is-small.is-left
+                  i.fas.fa-calendar
+  
+          div#formContainer.section
+            label(for='modernAward').label Modern Award
+            div.field
+              p.control.has-icons-left.has-icons-right
+                select#modernAward.input(type="select" placeholder="Clerks - Private Sector").is-rounded
+                  option(value="134801") Clerks - Private Sector
+                  option(value="134804")  General Retail Industry
+                  option(value="134806")  Hospitality Industry
+                  option(value="134805")  Registered and Licensed Clubs
+                  option(value="134803")  Fast Food Industry
+                span.icon.is-small.is-left
+                  i.fas.fa-money-check
+
+            label(for='typeEmployment').label Type of Employment
+            div.field
+              p.control.has-icons-left
+                select#typeEmployment.input(type="select").is-rounded
+                  option(value="5278911") Full Time
+                  option(value="5278929")  Part Time
+                  option(value="5278915")  Casual
+                span.icon.is-small.is-left
+                  i.fas.fa-clock
+
+            label(for='levelEmploymemt').label Level of Employment
+              div.field
+                p.control.has-icons-left
+                  select#levelEmployment.input(type="select").is-rounded
+                    option(value="5278935") Level 1
+                    option(value="5278936") Level 2
+                    option(value="5278925") Level 3
+                    option(value="5278937") Level 3 Supervisor
+                  span.icon.is-small.is-left
+                    i.fas.fa-tasks
+                    
+            label(for='employmentStartDate').label Employment Start Date
+              div.field
+                p.control.has-icons-left
+                  input#employmentStartDate.input(type="date").is-rounded
+                  span.icon.is-small.is-left
+                    i.fas.fa-calendar
+          div#formContainer.section
+            button.btn.waves-effect.waves-light.right(type='submit', value='Submit').button.is-primary
+                | Search
+
