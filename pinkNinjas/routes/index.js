@@ -4,7 +4,6 @@ var router = express.Router();
 
 //- Require controller modules
 var user_controller = require('../controllers/userController');
-=======
 // DB models
 var formModel = require('../database/storeData');
 
