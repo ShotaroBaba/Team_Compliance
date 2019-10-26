@@ -6,10 +6,11 @@ block content
       section.hero
         img(src='/img/pink_compliance_logo_transparent.png' style="width: 400px")
         p Welcome to #{title}
+        p Find out how much money you should be earning
 
     section.section
       .row
-        form(action='/', method='post')
+        form(action='/result', method='post')
           div#formContainer.section
             label(for='name').label Name
             div.field
@@ -31,7 +32,7 @@ block content
                 input#dateOfBirth.input(type="date").is-rounded
                 span.icon.is-small.is-left
                   i.fas.fa-calendar
-  
+
           div#formContainer.section
             label(for='modernAward').label Modern Award
             div.field
@@ -65,7 +66,7 @@ block content
                     option(value="5278937") Level 3 Supervisor
                   span.icon.is-small.is-left
                     i.fas.fa-tasks
-                    
+
             label(for='employmentStartDate').label Employment Start Date
               div.field
                 p.control.has-icons-left
