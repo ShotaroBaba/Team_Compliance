@@ -18,7 +18,10 @@ var FormSchema = new Schema({
     "modern_awards": {
         type: String
     },
-    "employee_type": {
+    "employmentStatus": {
+        type: String
+    },
+    "EmploymentLevel": {
         type: String
     }
 });

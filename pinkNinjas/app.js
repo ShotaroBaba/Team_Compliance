@@ -3,11 +3,35 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+// connecting the database
+const dbConn = "mongodb+srv://teamcompliance:teamcompliance@cluster0-cyhng.mongodb.net/pinkninjas?retryWrites=true&w=majority"
+try {
+	mongoose.connect(
+		dbConn,
+		{
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+			useFindAndModify: false
+		},
+		err => {
+			if (err) {
+				console.log("Error connecting to database", err)
+			} else {
+				console.log("Connected to database!")
+			}
+		}
+	)
+} catch (err) {
+	console.log('mongoose connection error: ', err);
+}
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

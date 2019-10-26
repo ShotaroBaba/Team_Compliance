@@ -2,11 +2,17 @@
 
 ## by Team Pink Wholesome Ninjas for the Tanda Hackathon 2019
 
+Team Members: [Ben Ulcoq](https://github.com/BenUlcoq), [Carlie Hamilton](https://github.com/BlueCodeThree), [John Santias](https://github.com/AsianJohnBoi), [Katrina Marquez](https://github.com/katrinamarquez), [Santiago Chamon](https://github.com/llausa), [Shotaro Baba](https://github.com/ShotaroBaba), and [Tony Huynh](https://github.com/t-hnh10)
+
 ### About This Thing
 
-This thing is a thing that does the stuff!
+This website allows a user to enter the details about their employment to see if they are being paid correctly, as according to the specific Australian Modern Award for their job.
 
-### How To Install
+An advantage of this website over others is that you can quickly see how much you should have at least been paid.
+
+This website was created over a day for the Tanda Hackathon 2019 in Brisbane, Australia!
+
+### How To Install and Run
 
 * clone or fork the repository
 * install:
@@ -18,18 +24,22 @@ npm install
 * test the server is working:
 
 ```
-nodemon start
-```
-
-or
-
-```
 npm start
 ```
 
 # Modern Award Wage Compliance App
 
 Created by **Team Pink Wholesome Ninjas** for **Tanda Hackathon 2019**.
+
+Team Members: [Ben Ulcoq](https://github.com/BenUlcoq), [Carlie Hamilton](https://github.com/BlueCodeThree), [John Santias](https://github.com/AsianJohnBoi), [Katrina Marquez](https://github.com/katrinamarquez), [Santiago Chamon](https://github.com/llausa), [Shotaro Baba](https://github.com/ShotaroBaba), and [Tony Huynh](https://github.com/t-hnh10)
+
+## About
+
+This website allows a user to enter the details about their employment to see if they are being paid correctly, as according to the specific Australian Modern Award for their job.
+
+An advantage of this website over others is that you can quickly see how much you should have at least been paid.
+
+This website was created over a day for the Tanda Hackathon 2019 in Brisbane, Australia!
 
 ## Getting Started
 
@@ -64,10 +74,6 @@ Or
 nodemon start
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
@@ -78,10 +84,6 @@ Add additional notes about how to deploy this on a live system
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
 * **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
@@ -91,10 +93,3 @@ See also the list of [contributors](https://github.com/your/project/contributors
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
