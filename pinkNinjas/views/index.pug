@@ -1,12 +1,16 @@
 extends layout
 
 block content
-  h1.title= title
-  p Find out how much money you should be earning
+  div.container
+    section.section
+      section.hero
+        img(src='/img/pink_compliance_logo_transparent.png' style="width: 400px")
+        p Welcome to #{title}
+        p Find out how much money you should be earning
 
-    .section
+    section.section
       .row
-        form(action='/', method='post')
+        form(action='/result', method='post')
           div#formContainer.section
             label(for='name').label Name
             div.field
