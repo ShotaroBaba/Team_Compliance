@@ -30,7 +30,7 @@ router.post('/result', async (req, res) => {
     t.modern_awards = req.body.modernAward;
     t.employmentStatus = req.body.employmentStatus;
     t.EmploymentLevel = req.body.levelEmployment;
-    t.employee_id = "1145211";
+    t.employee_id = 1145211;
 
     t.save(function(err){
       if (err) {
