@@ -3,11 +3,35 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+// connecting the database
+const dbConn = "mongodb://localhost/pink_ninja"
+// Set three properties to avoid deprecation warnings:
+// useNewUrlParser: true
+// useUnifiedTopology: true
+// useFileAndModify: false
+mongoose.connect(
+	dbConn,
+	{
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useFindAndModify: false
+	},
+	err => {
+		if (err) {
+			console.log("Error connecting to database", err)
+		} else {
+			console.log("Connected to database!")
+		}
+	}
+)
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
