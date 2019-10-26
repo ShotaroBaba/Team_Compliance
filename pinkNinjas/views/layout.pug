@@ -6,11 +6,10 @@ html
     script(defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js")
     link(rel='stylezheet', href="public/stylesheets/style.css")
   body
-  div.container
-    section.section
-      section.hero
+    section.hero.is-primary
+      div.container
         img(src='/img/pink_compliance_logo_transparent.png' style="width: 400px")
-        p Welcome to #{title}
-        p Find out how much money you should be earning
+        p.subtitle Find out how much money you should be earning
+        p
 
     block content
