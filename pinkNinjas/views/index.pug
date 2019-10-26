@@ -6,14 +6,27 @@ block content
     .container
       .row
         form(action='/', method='post')
-          .input-field.col.s12
-            | Name: 
-            input#Name.validate(type='text', name='query')
-            label(for='Name')
-          .input-field.col.s12
-            | Name: 
-            input#Name.validate(type='text', name='query')
-            label(for='Name')
+          div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', placeholder='first and last' name='name')
+          div.form-group
+            label(for='email') Email:
+            input#email.form-control(type='email', placeholder='name@email.com' name='email')
+          div.form-group
+            label(for='dateOfBirth') Date Of Birth:
+            input#dateOfBirth.form-control(type='text', placeholder='formatting example for dob' name='dateOfBirth')
+          div.form-group
+            label(for='employmentStartDate') Employment Start Date:
+            input#employmentStartDate.form-control(type='text', placeholder='formatting example' name='employmentStartDate')
+          div.form-group
+            label(for='modernAward') Modern Award:
+            input#modernAward.form-control(type='text', placeholder='formatting example' name='modernAward')
+          div.form-group
+            label(for='employmentStatus') Employment Status:
+            input#modernAward.form-control(type='text', placeholder='ft, pt, cas' name='employmentStatus')
+          div.form-group
+            label(for='levelEmployment') Level of Employment:
+            input#modernAward.form-control(type='text', placeholder='stuff here' name='levelEmployment')
           button.btn.waves-effect.waves-light.right(type='submit', value='Submit')
               | Search
 
