@@ -4,11 +4,15 @@ extends layout
 //- var user_controller = require('../controllers/userController');
 
 block content
-  h1= title
-  p Welcome to #{title}
-  p Katrina get off facebook
+  .container
+    .section
+      section.hero
+        h1.title.is-size-1= title
+        .subtitle  
+          p Welcome to #{title}
+          p Katrina get off facebook
 
-    .container
+    .section
       .row
         form(action='/', method='post')
           label(for='name').label Name:
