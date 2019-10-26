@@ -25,6 +25,7 @@ router.get('/', function(req, res, next) {
                       });
 });
 
+/* POST result page */
 router.post('/result', function(req, res) {
   // console.log(req.body);
   try {
@@ -50,7 +51,7 @@ router.post('/result', function(req, res) {
   } catch (err) {
     res.render('error', { message: "Error occured saving to db", error: err })
   }
-  
+
   res.render('result', { title: 'result'});
 });
 

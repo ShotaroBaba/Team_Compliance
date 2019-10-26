@@ -13,8 +13,6 @@ var app = express();
 // connecting the database
 const dbConn = "mongodb+srv://teamcompliance:teamcompliance@cluster0-cyhng.mongodb.net/pinkninjas?retryWrites=true&w=majority"
 try {
-
-
 	mongoose.connect(
 		dbConn,
 		{
