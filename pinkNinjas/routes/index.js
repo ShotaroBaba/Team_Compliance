@@ -26,7 +26,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/result', function(req, res) {
-  console.log(req.body);
+  // console.log(req.body);
   try {
 
     // store data in db
