@@ -4,3 +4,19 @@ block content
   h1= title
   p Welcome to #{title}
   p Katrina get off facebook
+
+    .container
+      .row
+        form(action='/', method='post')
+          .input-field.col.s12
+            | Name: 
+            input#Name.validate(type='text', name='query')
+            label(for='Name')
+          .input-field.col.s12
+            | Name: 
+            input#Name.validate(type='text', name='query')
+            label(for='Name')
+          button.btn.waves-effect.waves-light.right(type='submit', value='Submit')
+              | Search
+
+
