@@ -3,28 +3,26 @@ extends layout
 block content
   section.section
     .row
-    h2
-      div.tile.is-parent
-        article.tile.is-child.notification.is-primary
-          h1.title Mon-Fri Rate
-          p.subtitle #{monfri_cost} 
-            div.content
-      div.tile
-        h1 Mon-Fri Rate
-        br
-        p #{monfri_cost}
-      div.tile
-        h1 Saturday Rate
-        br
-        p #{sat_cost}
-      div.tile
-        h1 Sunday Rate
-        br
-        p #{sun_cost}
-      div.tile
-        h1 Public Holiday Rate
-        br
-        p #{publicholiday_cost}
+
+      h2.title We've calculated your hourly rates...
+      h3.subtitle Based on the information you provided you should be receiving the following compensation.
+
+      div.columns
+        div.column
+          div.tile.is-parent
+            article.tile.is-child.notification.is-primary
+              h2.title Mon-Fri Rate
+              h3.subtitle $#{monfri_cost}/hr
+        div.column
+          div.tile.is-parent
+            article.tile.is-child.notification.is-info
+              h2.title Sat Rate
+              h3.subtitle $#{sat_cost}/hr
+        div.column
+          div.tile.is-parent
+            article.tile.is-child.notification.is-link
+              h2.title Sun Rate
+              h3.subtitle $#{sun_cost}/hr
 
   //- h1= Result
   //- p Welcome to #{title}
