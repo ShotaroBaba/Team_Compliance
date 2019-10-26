@@ -5,6 +5,7 @@ var { getData } = require('../controllers/userController');
 
 //- Require controller modules
 var user_controller = require('../controllers/userController');
+
 // DB models
 var formModel = require('../database/storeData');
 
@@ -48,6 +49,7 @@ router.post('/result', async (req, res) => {
         console.log('Saved to db');
       }
     })
+
 
   } catch (err) {
     res.render('error', { message: "Error occurred saving to db", error: err })
