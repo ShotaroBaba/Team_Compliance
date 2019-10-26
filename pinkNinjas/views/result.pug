@@ -1,7 +1,32 @@
 extends layout
 
 block content
-  h1= Result
-  p Welcome to #{title}
-  p #{name}
-  p #{base_rate}
+  section.section
+    .row
+    h2
+      div.tile.is-parent
+        article.tile.is-child.notification.is-primary
+          h1.title Mon-Fri Rate
+          p.subtitle #{monfri_cost} 
+            div.content
+      div.tile
+        h1 Mon-Fri Rate
+        br
+        p #{monfri_cost}
+      div.tile
+        h1 Saturday Rate
+        br
+        p #{sat_cost}
+      div.tile
+        h1 Sunday Rate
+        br
+        p #{sun_cost}
+      div.tile
+        h1 Public Holiday Rate
+        br
+        p #{publicholiday_cost}
+
+  //- h1= Result
+  //- p Welcome to #{title}
+  //- p #{name}
+  //- p #{base_rate}
