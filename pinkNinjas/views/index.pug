@@ -1,13 +1,8 @@
 extends layout
 
 block content
-  .container
-    .section
-      section.hero
-        h1.title.is-size-1= title
-        .subtitle  
-          p Welcome to #{title}
-          p Katrina get off facebook
+  h1= title
+  p Find out how much money you should be earning
 
     .section
       .row
@@ -33,7 +28,7 @@ block content
                 input#dateOfBirth.input(type="date").is-rounded
                 span.icon.is-small.is-left
                   i.fas.fa-calendar
-  
+
           div#formContainer.section
             label(for='modernAward').label Modern Award
             div.field
@@ -67,7 +62,7 @@ block content
                     option(value="5278937") Level 3 Supervisor
                   span.icon.is-small.is-left
                     i.fas.fa-tasks
-                    
+
             label(for='employmentStartDate').label Employment Start Date
               div.field
                 p.control.has-icons-left
