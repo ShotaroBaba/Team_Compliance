@@ -1,4 +1,9 @@
+// Require controller modules
+var user_controller = require('../controllers/userController');
+
+
 extends layout
+
 
 block content
   h1= title
@@ -8,6 +13,14 @@ block content
     .container
       .row
         form(action='/', method='post')
+          .input-field.col.s12
+            | Name:
+            input#Name.validate(type='text', name='query')
+            label(for='Name')
+          .input-field.col.s12
+            | Name:
+            input#Name.validate(type='text', name='query')
+            label(for='Name')
           div.form-group
             label(for='name') Name:
             input#name.form-control(type='text', placeholder='first and last' name='name')
@@ -31,5 +44,3 @@ block content
             input#modernAward.form-control(type='text', placeholder='stuff here' name='levelEmployment')
           button.btn.waves-effect.waves-light.right(type='submit', value='Submit')
               | Search
-
-
