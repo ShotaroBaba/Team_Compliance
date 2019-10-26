@@ -6,9 +6,13 @@ Team Members: [Ben Ulcoq](https://github.com/BenUlcoq), [Carlie Hamilton](https:
 
 ### About This Thing
 
-This thing is a thing that does the stuff!
+This website allows a user to enter the details about their employment to see if they are being paid correctly, as according to the specific Australian Modern Award for their job.
 
-### How To Install
+An advantage of this website over others is that you can quickly see how much you should have at least been paid.
+
+This website was created over a day for the Tanda Hackathon 2019 in Brisbane, Australia!
+
+### How To Install and Run
 
 * clone or fork the repository
 * install:
@@ -22,3 +26,5 @@ npm install
 ```
 npm start
 ```
+
+You should be able to then access the website on `http://localhost:3000/`
