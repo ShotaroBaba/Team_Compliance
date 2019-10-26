@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var { getData, create_user } = require('../controllers/userController');
+var { getData, create_user, createShift } = require('../controllers/userController');
 
 // //- Require controller modules
 // var user_controller = require('../controllers/userController');
@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
 router.post('/result', async (req, res) => {
   // console.log(req.body);
   try {
-    const callResponse = await create_user(req);
+    const callResponse = await createShift(req);
     // const callResponse = await getData("award_tags");
     console.log(callResponse);
 
@@ -43,13 +43,13 @@ router.post('/result', async (req, res) => {
     t.employmentStatus = req.body.employmentStatus;
     t.EmploymentLevel = req.body.levelEmployment;
 
-    t.save(function(err){
-      if (err) {
-        console.log('Error saving to db: ', err);
-      } else {
-        console.log('Saved to db');
-      }
-    })
+    // t.save(function(err){
+    //   if (err) {
+    //     console.log('Error saving to db: ', err);
+    //   } else {
+    //     console.log('Saved to db');
+    //   }
+    // })
 
 
   } catch (err) {
