@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var { getData, create_user } = require('../controllers/userController');
+var { getData, create_user, getUser } = require('../controllers/userController');
 
 // //- Require controller modules
 // var user_controller = require('../controllers/userController');
@@ -32,6 +32,9 @@ router.post('/result', async (req, res) => {
     const callResponse = await create_user(req);
     // const callResponse = await getData("award_tags");
     console.log(callResponse);
+
+    const getUserResponse = await getUser(req);
+    console.log(getUserResponse);
 
     // store data in db
     let t = new formModel();

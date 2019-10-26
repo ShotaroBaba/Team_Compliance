@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-const callHeader = 
+const callHeader =
   {
     "Authorization": "Bearer 18c156faf12d5ab58c8e9bf79f03538b18f60a12f970a47f5e09103256ad8a82",
     "Content-Type": "application/json"
@@ -37,5 +37,20 @@ async function getData(endpoint) {
   }
 }
 
-module.exports = { getData, create_user };
+async function getUser(req) {
+  let id =  '123456';
+  let Url =`/api/v2/users/${id}?show_wages=true`;
+   try {
+    const response = await axios.get(Url);
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+module.exports = {
+  getData,
+  create_user,
+  getUser
+};
 
