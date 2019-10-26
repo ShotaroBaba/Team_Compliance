@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-var { getData, create_user, createShift } = require('../controllers/userController');
+var { getData, create_user, createShifts } = require('../controllers/userController');
 
 // //- Require controller modules
-// var user_controller = require('../controllers/userController');
+var user_controller = require('../controllers/userController');
 
 // DB models
 var formModel = require('../database/storeData');
@@ -29,9 +29,6 @@ router.get('/', function(req, res, next) {
 router.post('/result', async (req, res) => {
   // console.log(req.body);
   try {
-    const callResponse = await createShift(req);
-    // const callResponse = await getData("award_tags");
-    console.log(callResponse);
 
     // store data in db
     let t = new formModel();
@@ -42,6 +39,18 @@ router.post('/result', async (req, res) => {
     t.modern_awards = req.body.modernAward;
     t.employmentStatus = req.body.employmentStatus;
     t.EmploymentLevel = req.body.levelEmployment;
+
+    const callResponse1 = await createShift(user_controller.user_id, "2019-10-14", 1571011200, 1571014800, "APPROVED");
+    // const callResponse = await getData("award_tags");
+    console.log(callResponse1);
+
+    const callResponse2 = await createShift(user_controller.user_id, "2019-10-19", 1571443200, 1571446800, "APPROVED");
+    // const callResponse = await getData("award_tags");
+    console.log(callResponse2);
+
+    const callResponse3 = await createShift(user_controller.user_id, "2019-10-20", 1571529600, 1571533200, "APPROVED");
+    // const callResponse = await getData("award_tags");
+    console.log(callResponse3);
 
     // t.save(function(err){
     //   if (err) {

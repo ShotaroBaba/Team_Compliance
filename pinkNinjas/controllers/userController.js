@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-const callHeader = 
+const callHeader =
   {
     "Authorization": "Bearer 18c156faf12d5ab58c8e9bf79f03538b18f60a12f970a47f5e09103256ad8a82",
     "Content-Type": "application/json"
@@ -34,7 +34,7 @@ async function getData(endpoint) {
   }
 }
 
-async function createShift(data) {
+async function createShift(user_id, date, start, finish, status) {
 
   // console.log(data.body);
   var startTime = new Date(`${data.body.date}T${data.body.start}`).getTime() / 1000;
@@ -42,15 +42,15 @@ async function createShift(data) {
 
   // console.log(startTime, finishTime);
   const params={
-    user_id: data.body.id,
-    date: data.body.date,
-    start: startTime,
-    finish: finishTime,
-    department_id: data.body.department,
+    user_id: user_id,
+    date: date,
+    start: start,
+    finish: finish,
+    status: status
     // metadata: data.body.me
   }
   try {
-    const response = await axios.post(`https://my.tanda.co/api/v2/shifts`, { params: params, 
+    const response = await axios.post(`https://my.tanda.co/api/v2/shifts`, { params: params,
       headers: {
         "Authorization": "Bearer 18c156faf12d5ab58c8e9bf79f03538b18f60a12f970a47f5e09103256ad8a82",
         "Content-Type": "application/json"
@@ -59,7 +59,26 @@ async function createShift(data) {
   } catch (err) {
     console.log(err);
   }
-} 
+}
+
+// functionality for timesheets (which we're not doing)
+// async function createShifts(user_id, date, start, finish, status) {
+//   const Url='https://my.tanca.co/api/v2/shifts';
+//   const params={
+//     user_id: user_id,
+//     date: date,
+//     start: start,
+//     finish: finish,
+//     status: "APPROVED"
+//   }
+//   axios({
+//     method: 'post',
+//     url: Url,
+//     params: params,
+//     headers: callHeader
+//   })
+//   .then(data=>console.log(data))
+//   .catch(err=>console.log(err))
+// };
 
 module.exports = { getData, create_user, createShift };
-
