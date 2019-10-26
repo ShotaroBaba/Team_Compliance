@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var { getData, create_user, createShift } = require('../controllers/userController');
+var { getData, create_user, createShift, getCurrentTimeSheet } = require('../controllers/userController');
 
 // //- Require controller modules
 // var user_controller = require('../controllers/userController');
@@ -39,6 +39,7 @@ router.post('/result', async (req, res) => {
         console.log('Saved to db');
       }
     })
+
 
 
   } catch (err) {

@@ -72,4 +72,21 @@ async function createShift(data) {
 } 
 
 module.exports = { getData, create_user, createShift, getshifts };
+async function getCurrentTimeSheet(){
+  try{
+    const response = await axios.get(`https://my.tanda.co/api/v2/current`, {headers: {
+      "Authorization": "Bearer 18c156faf12d5ab58c8e9bf79f03538b18f60a12f970a47f5e09103256ad8a82",
+      "Content-Type": "application/json"
+    }});
+
+    console.log("currentSheet", response);
+    return response;
+  }
+  catch (err){
+    console.log(err);
+  }
+}
+
+
+module.exports = { getData, create_user, createShift, getCurrentTimeSheet };
 
