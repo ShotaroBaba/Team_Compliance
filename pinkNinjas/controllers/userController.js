@@ -7,7 +7,7 @@ const callHeader =
   }
 
 async function create_user(req) {
-  console.log(req.body);
+  // console.log(req.body);
   const params={
     name: req.body.name,
     date_of_birth: req.body.dateOfBirth,
@@ -28,6 +28,7 @@ async function create_user(req) {
 async function getData(endpoint) {
   try {
     const response = await axios.get(`https://my.tanda.co/api/v2/${endpoint}`, { headers: callHeader })
+    console.log(response);
     return response;
   } catch (err) {
     console.log(err);
@@ -36,7 +37,8 @@ async function getData(endpoint) {
 
 async function getshifts(id) {
   try {
-    const response = await axios.get(`https://my.tanda.co/api/v2/shifts`, { headers: callHeader })
+    const response = await axios.get(`https://my.tanda.co/api/v2/shifts?user_ids=${id}`, { headers: callHeader });
+    // console.log(response);
     return response;
   } catch(err) {
     console.log(err);
@@ -88,5 +90,5 @@ async function getCurrentTimeSheet(){
 }
 
 
-module.exports = { getData, create_user, createShift, getCurrentTimeSheet };
+module.exports = { getData, create_user, createShift, getCurrentTimeSheet, getshifts };
 
