@@ -38,7 +38,7 @@ async function getUser(req) {
   let id =  '123456';
   let Url =`/api/v2/users/${id}?show_wages=true`;
    try {
-    const response = await axios.get(Url);
+    const response = await axios.get();
     console.log(response);
   } catch (error) {
     console.error(error);

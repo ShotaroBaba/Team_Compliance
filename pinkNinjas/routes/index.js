@@ -33,9 +33,6 @@ router.post('/result', async (req, res) => {
     // const callResponse = await getData("award_tags");
     console.log(callResponse);
 
-    const getUserResponse = await getUser(req);
-    console.log(getUserResponse);
-
     // store data in db
     let t = new formModel();
     t.name = req.body.name;
