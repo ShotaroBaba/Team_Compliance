@@ -1,4 +1,9 @@
+// Require controller modules
+var user_controller = require('../controllers/userController');
+
+
 extends layout
+
 
 block content
   h1= title
@@ -31,5 +36,3 @@ block content
             input#modernAward.form-control(type='text', placeholder='Level of Employment' name='levelEmployment')
           button.btn.waves-effect.waves-light.right(type='submit', value='Submit')
               | Search
-
-
