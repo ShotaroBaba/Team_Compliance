@@ -11,26 +11,32 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // connecting the database
-const dbConn = "mongodb://localhost/pink_ninja"
+const dbConn = "mongodb+srv://teamcompliance:teamcompliance@cluster0-cyhng.mongodb.net/pinkninjas?retryWrites=true&w=majority"
 // Set three properties to avoid deprecation warnings:
 // useNewUrlParser: true
 // useUnifiedTopology: true
 // useFileAndModify: false
-mongoose.connect(
-	dbConn,
-	{
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-		useFindAndModify: false
-	},
-	err => {
-		if (err) {
-			console.log("Error connecting to database", err)
-		} else {
-			console.log("Connected to database!")
+try {
+
+
+	mongoose.connect(
+		dbConn,
+		{
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+			useFindAndModify: false
+		},
+		err => {
+			if (err) {
+				console.log("Error connecting to database", err)
+			} else {
+				console.log("Connected to database!")
+			}
 		}
-	}
-)
+	)
+} catch (err) {
+	console.log('mongoose connection error: ', err);
+}
 
 
 // view engine setup
