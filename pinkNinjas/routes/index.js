@@ -11,7 +11,7 @@ var formModel = require('../database/storeData');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'pinkNinjas',
+  res.render('index', { title: 'Pink Compliance',
                         name: 'TestPinkNinja Name',
                         base_rate: '15',
                         monfri_rate: '1.25',
