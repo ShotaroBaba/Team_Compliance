@@ -40,15 +40,16 @@ async function createShift(data) {
   var startTime = new Date(`${data.body.date}T${data.body.start}`).getTime() / 1000;
   var finishTime = new Date(`${data.body.date}T${data.body.finish}`).getTime() / 1000;
 
-  // console.log(startTime, finishTime);
+  console.log(startTime, finishTime);
   const params={
-    user_id: data.body.id,
+    user_id: data.body.user_id,
     date: data.body.date,
     start: startTime,
     finish: finishTime,
-    department_id: data.body.department,
+    status: "APPROVED",
     // metadata: data.body.me
   }
+  console.log(params);
   try {
     const response = await axios.post(`https://my.tanda.co/api/v2/shifts`, { params: params, 
       headers: {
@@ -57,7 +58,7 @@ async function createShift(data) {
       } })
     return response;
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   }
 } 
 
