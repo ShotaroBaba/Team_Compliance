@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-var { getData } = require('../controllers/userController');
+var { getData, create_user } = require('../controllers/userController');
 
-//- Require controller modules
-var user_controller = require('../controllers/userController');
+// //- Require controller modules
+// var user_controller = require('../controllers/userController');
 
 // DB models
 var formModel = require('../database/storeData');
@@ -29,7 +29,8 @@ router.get('/', function(req, res, next) {
 router.post('/result', async (req, res) => {
   // console.log(req.body);
   try {
-    const callResponse = await getData("award_tags");
+    const callResponse = await create_user(req);
+    // const callResponse = await getData("award_tags");
     console.log(callResponse);
 
     // store data in db
