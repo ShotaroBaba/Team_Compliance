@@ -11,34 +11,59 @@ block content
     .container
       .row
         form(action='/', method='post')
-          .input-field.col.s12
-            | Name:
-            input#Name.validate(type='text', name='query')
-            label(for='Name')
-          .input-field.col.s12
-            | Name:
-            input#Name.validate(type='text', name='query')
-            label(for='Name')
-          div.form-group
-            label(for='name') Name:
-            input#name.form-control(type='text', placeholder='first and last' name='name')
-          div.form-group
-            label(for='email') Email:
-            input#email.form-control(type='email', placeholder='name@email.com' name='email')
-          div.form-group
-            label(for='dateOfBirth') Date Of Birth:
-            input#dateOfBirth.form-control(type='text', placeholder='formatting example for dob' name='dateOfBirth')
-          div.form-group
-            label(for='employmentStartDate') Employment Start Date:
-            input#employmentStartDate.form-control(type='text', placeholder='formatting example' name='employmentStartDate')
-          div.form-group
-            label(for='modernAward') Modern Award:
-            input#modernAward.form-control(type='text', placeholder='formatting example' name='modernAward')
-          div.form-group
-            label(for='employmentStatus') Employment Status:
-            input#modernAward.form-control(type='text', placeholder='ft, pt, cas' name='employmentStatus')
-          div.form-group
-            label(for='levelEmployment') Level of Employment:
-            input#modernAward.form-control(type='text', placeholder='stuff here' name='levelEmployment')
-          button.btn.waves-effect.waves-light.right(type='submit', value='Submit')
+          label(for='name').label Name:
+          div.field
+            p.control.has-icons-left
+              input#name.input(type="name" placeholder="John Smith").is-rounded
+              span.icon.is-small.is-left
+                i.fas.fa-user
+
+          label(for='email').label Email:
+          div.field
+            p.control.has-icons-left
+              input#email.input(type="email" placeholder="johnsmith@gmail.com").is-rounded
+              span.icon.is-small.is-left
+                i.fas.fa-envelope
+
+          label(for='dateOfBirth').label Date Of Birth:
+          div.field
+            p.control.has-icons-left
+              input#dateOfBirth.input(type="date").is-rounded
+              span.icon.is-small.is-left
+                i.far.fa-calendar
+
+          label(for='employmentStartDate').label Employment Start Date:
+          div.field
+            p.control.has-icons-left
+              input#employmentStartDate.input(type="date").is-rounded
+              span.icon.is-small.is-left
+                i.far.fa-calendar
+
+          label(for='modernAward').label Modern Award:
+          div.field
+            p.control.has-icons-left.has-icons-right
+              select#modernAward.input(type="select" placeholder="Clerks - Private Sector").is-rounded
+                option(value="134801") Clerks - Private Sector
+                option(value="134804")  General Retail Industry
+                option(value="134806")  Hospitality Industry
+                option(value="134805")  Registered and Licensed Clubs
+                option(value="134803")  Fast Food Industry
+              span.icon.is-small.is-left
+                i.fas.fa-money-check
+
+          label(for='typeEmployment').label Type of Employment:
+          div.field
+            p.control.has-icons-left
+              select#typeEmployment.input(type="select").is-rounded
+              span.icon.is-small.is-left
+                i.far.fa-calendar
+
+          label(for='levelEmploymemt').label Level of Employment:
+            div.field
+              p.control.has-icons-left
+                select#levelEmployment.input(type="select").is-rounded
+                span.icon.is-small.is-left
+                  i.far.fa-calendar
+
+          button.btn.waves-effect.waves-light.right(type='submit', value='Submit').button.is-primary
               | Search
