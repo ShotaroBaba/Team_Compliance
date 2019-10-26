@@ -34,6 +34,15 @@ async function getData(endpoint) {
   }
 }
 
+async function getshifts(id) {
+  try {
+    const response = await axios.get(`https://my.tanda.co/api/v2/shifts`, { headers: callHeader })
+    return response;
+  } catch(err) {
+    console.log(err);
+  }
+}
+
 async function createShift(data) {
 
   // console.log(data.body);
@@ -62,5 +71,5 @@ async function createShift(data) {
   }
 } 
 
-module.exports = { getData, create_user, createShift };
+module.exports = { getData, create_user, createShift, getshifts };
 

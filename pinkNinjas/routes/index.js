@@ -19,7 +19,7 @@ router.post('/result', async (req, res) => {
   try {
 
     const newUser = await create_user(req); 
-    console.log(newUser.data[0].id);
+    // console.log(newUser.data[0].id);
 
     // store data in db
     let t = new formModel();
@@ -30,7 +30,7 @@ router.post('/result', async (req, res) => {
     t.modern_awards = req.body.modernAward;
     t.employmentStatus = req.body.employmentStatus;
     t.EmploymentLevel = req.body.levelEmployment;
-    t.employee_id = newUser.data[0].id;
+    t.employee_id = "1145211";
 
     t.save(function(err){
       if (err) {
