@@ -20,12 +20,5 @@ npm install
 * test the server is working:
 
 ```
-nodemon start
-```
-
-or
-
-```
 npm start
 ```
-
