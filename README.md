@@ -76,19 +76,19 @@ nodemon start
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+* [NodeJS](https://nodejs.org/en/ - HTTP Server
+* [PUG](https://pugjs.org/api/getting-started.html) - The front-end framework
+* [Bulma](https://bulma.io/) - CSS frameowkr
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Ben Ulcoq** - *Frontend Developer* - [Ben Ulcoq](https://github.com/BenUlcoq)
+* **Tony Huynh** - *Frontend Developer* - [Tony Huynh](https://github.com/t-hnh10)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **John Santias** - *Lead Backend Developer* - [John Santias](https://github.com/AsianJohnBoi)
+* **Santiago Chamon** - *Backend Developer* - [Santiago Chamon](https://github.com/llausa)
+* **Carlie Hamilton** - *Backend Developer* - [Carlie Hamilton](https://github.com/BlueCodeThree)
+* **Shotaro Baba** - *Backend Developer* - [Shotaro Baba](https://github.com/ShotaroBaba)
 
 ## License
 
